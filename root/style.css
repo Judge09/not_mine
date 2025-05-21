@@ -4,37 +4,33 @@
   box-sizing: border-box;
 }
 
-body, html {
+html, body {
   height: 100%;
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(to bottom, #26483e, #a3bba8);
-  overflow: hidden;
 }
 
-.wrapper {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
-}
-
-.slider {
+body {
   display: flex;
-  width: 200%;
-  height: 100%;
-  transition: transform 0.5s ease;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
 
 .screen {
   width: 100%;
+  max-width: 400px;
+  background-color: rgba(255, 255, 255, 0.05);
   padding: 2rem;
-  flex-shrink: 0;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
   color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
+}
+
+.form-screen {
+  background-color: #e5e5d7;
+  color: #333;
 }
 
 h1, h2 {
@@ -49,16 +45,21 @@ h1, h2 {
 p {
   margin-bottom: 1.5rem;
   font-size: 1rem;
-  max-width: 300px;
 }
 
-.btn {
-  padding: 0.9rem 1rem;
+.btn, .btn-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 0.9rem;
+  margin: 0.5rem 0;
   font-size: 1rem;
-  border-radius: 8px;
   border: none;
-  margin-bottom: 1rem;
+  border-radius: 8px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .btn-dark {
@@ -71,49 +72,42 @@ p {
   color: #333;
 }
 
-.btn-social {
-  width: 80%;
-  max-width: 300px;
-  margin: 0.5rem 0;
-  padding: 0.9rem;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  border: none;
-}
-
 .google {
-  background: white;
+  background-color: #fff;
   color: #333;
 }
 
 .apple {
-  background: black;
-  color: white;
+  background-color: #000;
+  color: #fff;
 }
 
 .email {
-  background: #f1f1f1;
+  background-color: #f1f1f1;
   color: #444;
 }
 
-.login-text {
-  margin-top: 1rem;
-  font-size: 0.9rem;
+.icon {
+  width: 20px;
+  height: 20px;
 }
 
-.login-text a {
+input {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.small-text {
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}
+
+a {
   color: #d3f1c9;
   text-decoration: none;
   font-weight: bold;
 }
 
-/* Desktop Enhancements */
-@media (min-width: 768px) {
-  h1, h2 {
-    font-size: 2.5rem;
-  }
-  .btn, .btn-social {
-    font-size: 1.1rem;
-  }
-}
