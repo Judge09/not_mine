@@ -1,0 +1,122 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body, html {
+  height: 100%;
+  background: linear-gradient(to bottom, #26483e, #a3bba8);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+}
+
+/* Screen */
+.screen {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+
+h1, h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.highlight {
+  color: #e0c85a;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  color: #e6e6e6;
+}
+
+/* Buttons */
+.button-group, .social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.9rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-dark {
+  background-color: #2e4734;
+  color: white;
+}
+
+.btn-light {
+  background-color: #e2e2e2;
+  color: #333;
+}
+
+.btn-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.google {
+  background-color: #fff;
+  color: #333;
+}
+
+.apple {
+  background-color: #000;
+  color: #fff;
+}
+
+.email {
+  background-color: #f5f5f5;
+  color: #444;
+}
+
+.login-text {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+}
+
+.login-text a {
+  color: #d3f1c9;
+  text-decoration: none;
+}
+
+/* Responsive for Desktop */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 900px;
+  }
+
+  .screen {
+    flex: 1;
+  }
+}
